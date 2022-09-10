@@ -9,16 +9,16 @@ mixin univ(nesting)
 mixin navbar(loc, nesting)
     - let prefix = "../".repeat(nesting), attr;
     p
-        - attr = loc === "homepage" ? current : {href: prefix + 'index.htm', class: ""};
+        - attr = loc === "homepage" ? current : {href: prefix + 'index.html', class: ""};
         a&attributes(attr) homepage
         |  |
-        - attr = loc === "academia" ? current : {href: prefix + 'academia.htm', class: ""};
+        - attr = loc === "academia" ? current : {href: prefix + 'academia.html', class: ""};
         a&attributes(attr)  academia
         |  |
-        - attr = loc === "language" ? current : {href: prefix + 'cob/index.htm', class: ""};
+        - attr = loc === "language" ? current : {href: prefix + 'cob/index.html', class: ""};
         a&attributes(attr)  language
         |  |
-        - attr = loc === "projects" ? current : {href: prefix + 'proj/index.htm', class: ""};
+        - attr = loc === "projects" ? current : {href: prefix + 'proj/index.html', class: ""};
         a&attributes(attr)  projects
 
 
@@ -26,13 +26,13 @@ mixin cobnav(loc, nesting)
     +navbar("language", nesting+1)
     - let prefix = "../".repeat(nesting), attr;
     p
-        - attr = loc === "homepage" ? current : {href: prefix + 'index.htm'};
+        - attr = loc === "homepage" ? current : {href: prefix + 'index.html'};
         a&attributes(attr) homepage
         =" | "
-        - attr = loc === "roadmap" ? current : {href: prefix + 'roadmap.htm'};
+        - attr = loc === "roadmap" ? current : {href: prefix + 'roadmap.html'};
         a&attributes(attr) roadmap
         =" | "
-        - attr = loc === "plans" ? current : {href: prefix + 'plans.htm'};
+        - attr = loc === "plans" ? current : {href: prefix + 'plans.html'};
         a&attributes(attr) plans
 
 
