@@ -1,0 +1,53 @@
+@font-face {
+  font-family: Chomsky;
+  src: url("fonts/Chomsky.otf");
+}
+@font-face {
+  font-family: "Atkinson Hyperlegible";
+  font-style: normal;
+  font-weight: normal;
+  src: url("fonts/Atkinson/Regular.ttf");
+}
+@font-face {
+  font-family: "Atkinson Hyperlegible";
+  font-style: italic;
+  font-weight: normal;
+  src: url("fonts/Atkinson/Italic.ttf");
+}
+@font-face {
+  font-family: "Atkinson Hyperlegible";
+  font-style: normal;
+  font-weight: bold;
+  src: url("fonts/Atkinson/Bold.ttf");
+}
+@font-face {
+  font-family: "Atkinson Hyperlegible";
+  font-style: italic;
+  font-weight: bold;
+  src: url("fonts/Atkinson/BoldItalic.ttf");
+}
+body {
+  background-color: #000;
+  color: #fff;
+  font-family: "Atkinson Hyperlegible";
+}
+.center {
+  text-align: center;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+.frak {
+  font-family: "Chomsky";
+}
+.wide {
+  width: max-content;
+}
+.current {
+  font-weight: bold;
+}
+a:any-link {
+  color: #cef;
+  text-decoration-line: none;
+}

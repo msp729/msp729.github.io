@@ -1,0 +1,46 @@
+//module
+mixin univ(nesting)
+    link&attributes({rel:"stylesheet", href:"../".repeat(nesting)+"univ.css"})
+
+
+- const current = {class: "current", href: ""};
+
+
+mixin navbar(loc, nesting)
+    - let prefix = "../".repeat(nesting), attr;
+    p
+        - attr = loc === "homepage" ? current : {href: prefix + 'index.htm', class: ""};
+        a&attributes(attr) homepage
+        |  |
+        - attr = loc === "academia" ? current : {href: prefix + 'academia.htm', class: ""};
+        a&attributes(attr)  academia
+        |  |
+        - attr = loc === "language" ? current : {href: prefix + 'cob/index.htm', class: ""};
+        a&attributes(attr)  language
+        |  |
+        - attr = loc === "projects" ? current : {href: prefix + 'proj/index.htm', class: ""};
+        a&attributes(attr)  projects
+
+
+mixin cobnav(loc, nesting)
+    +navbar("language", nesting+1)
+    - let prefix = "../".repeat(nesting), attr;
+    p
+        - attr = loc === "homepage" ? current : {href: prefix + 'index.htm'};
+        a&attributes(attr) homepage
+        =" | "
+        - attr = loc === "roadmap" ? current : {href: prefix + 'roadmap.htm'};
+        a&attributes(attr) roadmap
+        =" | "
+        - attr = loc === "plans" ? current : {href: prefix + 'plans.htm'};
+        a&attributes(attr) plans
+
+
+mixin stbody
+    body
+        div.center
+            div
+                block
+
+
+//mixin
