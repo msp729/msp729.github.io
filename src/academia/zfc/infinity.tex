@@ -1,0 +1,10 @@
+\documentclass{minimal}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\newcommand \paren [1] {\left({#1}\right)}
+\renewcommand \brack [1] {\left[{#1}\right]}
+\renewcommand \brace [1] {\left\{{#1}\right\}}
+\renewcommand \empty {\ensuremath\varnothing}
+\begin{document}\begin{displaymath}
+\exists X\paren{\empty\in X\land \forall z\brack{z\in X\implies z\cup\brace{z}\in X}}
+\end{displaymath}\end{document}

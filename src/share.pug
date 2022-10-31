@@ -1,4 +1,3 @@
-//module
 mixin univ(nesting)
     link&attributes({rel:"stylesheet", href:"../".repeat(nesting)+"univ.css"})
 
@@ -12,7 +11,7 @@ mixin navbar(loc, nesting)
         - attr = loc === "homepage" ? current : {href: prefix + 'index.html', class: ""};
         a&attributes(attr) homepage
         |  |
-        - attr = loc === "academia" ? current : {href: prefix + 'academia.html', class: ""};
+        - attr = loc === "academia" ? current : {href: prefix + 'academia/index.html', class: ""};
         a&attributes(attr)  academia
         |  |
         - attr = loc === "language" ? current : {href: prefix + 'cob/index.html', class: ""};
@@ -27,7 +26,7 @@ mixin cobnav(loc, nesting)
     - let prefix = "../".repeat(nesting), attr;
     p
         - attr = loc === "homepage" ? current : {href: prefix + 'index.html'};
-        a&attributes(attr) homepage
+        a&attributes(attr) home
         =" | "
         - attr = loc === "roadmap" ? current : {href: prefix + 'roadmap.html'};
         a&attributes(attr) roadmap
@@ -36,11 +35,35 @@ mixin cobnav(loc, nesting)
         a&attributes(attr) plans
 
 
+mixin acdmnav(loc, nesting)
+    +navbar("academia", nesting+1)
+    - let prefix = "../".repeat(nesting), attr;
+    p
+        - attr = loc === "homepage" ? current : {href: prefix + 'index.html'};
+        a&attributes(attr) index
+        =" | "
+        - attr = loc === "zfc" ? current : {href: prefix + 'zfc.html'};
+        a&attributes(attr) zfc
+        =" | "
+        - attr = loc === "peano" ? current : {href: prefix + 'peano.html'};
+        a&attributes(attr) peano
+        =" | "
+        - attr = loc === "nf" ? current : {href: prefix + 'nf.html'};
+        a&attributes(attr) nf
+
+mixin projnav(loc, nesting)
+    +navbar("projects", nesting+1)
+    - let prefix = "../".repeat(nesting), attr;
+    p
+        - attr = loc === "homepage" ? current : {href: prefix + 'index.html'};
+        a&attributes(attr) index
+        =" | "
+        - attr = loc === "jpde" ? current : {href: prefix + 'jpde.html'};
+        a&attributes(attr) jPde
+
 mixin stbody
     body
         div.center
             div
                 block
 
-
-//mixin

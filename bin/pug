@@ -1,0 +1,26 @@
+#!/usr/bin/env node
+const pug = require("pug");
+const process = require("process");
+if (process.argv.length == 3) {
+  const fs = require("fs");
+  let pugFilePath = process.argv[1];
+  let outFilePath = process.argv[2];
+  if (!pugFilePath.endsWith(".pug")) {
+    pugFilePath += ".pug";
+  }
+  if (outFilePath === undefined) {
+    outFilePath = pugFilePath.slice(0, pugFilePath.length - 4) + ".html";
+  }
+  console.log("Compiling pug file at " + pugFilePath + " into " + outFilePath);
+  const pugSource = fs.readFileSync(pugFilePath).toString();
+  const compiledPug = pug.render(pugSource, { basedir: "." });
+} else {
+  let str = "";
+  process.stdin.setEncoding("utf8");
+  process.stdin.on("data", function (chunk) {
+    str += chunk;
+  });
+  process.stdin.on("end", function () {
+    process.stdout.write(pug.compile(str, {"basedir": "src"})({}));
+  });
+}

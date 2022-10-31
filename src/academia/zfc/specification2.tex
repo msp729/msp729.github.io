@@ -1,0 +1,15 @@
+\documentclass{minimal}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\newcommand \paren [1] {\left({#1}\right)}
+\renewcommand \brack [1] {\left[{#1}\right]}
+\renewcommand \brace [1] {\left\{{#1}\right\}}
+\renewcommand \empty {\ensuremath\varnothing}
+\begin{document}\begin{displaymath}
+\forall X,\varphi\exists Y\forall z\paren{
+  z\in Y \iff\brack{
+    z\in X\land
+    \varphi\paren{z, X}
+  }
+}
+\end{displaymath}\end{document}
