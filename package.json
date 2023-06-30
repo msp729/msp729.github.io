@@ -1,9 +1,0 @@
-{
-  "name": "msp729.github.io",
-  "version": "1.0.0",
-  "dependencies": {
-    "process": "^0.11.10",
-    "pug": "^3.0.2",
-    "stylus": "^0.59.0"
-  }
-}
