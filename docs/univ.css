@@ -3,12 +3,17 @@ body, html {
     padding: 0px;
     margin: 0px;
 }
-p a {
+#navbar a {
+    color: lightblue;
+    &:hover {
+        color: blue;
+    }
+}
+a {
     color: blue;
     text-decoration: none;
     &:hover {
         color: darkblue;
-        text-shadow: gray 0px 0px 4px;
     }
 }
 div {
@@ -21,7 +26,6 @@ div {
     }
 }
 #navbar {
-    background: black;
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -29,9 +33,7 @@ div {
     align-items: flex-end;
     color: white;
 }
-#navbar a {
-    color: white;
-}
+#navbar { background: #000; }
 #ico {
     font-size: 2em;
     justify-self: start;
