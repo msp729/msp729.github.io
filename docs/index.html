@@ -3,10 +3,34 @@
 <head>
     <title>The Greatest Website You've Ever Seen</title>
     <meta charset="UTF-8">
+    <style>
+#toomuchfun {
+    transform: scale(1.1) skew(5deg, 5deg);
+    color: black;
+    transition: transform 5s ease-in-out,
+                color 20s ease-in-out;
+    text-shadow: 0 0 1ex lightblue;
+}
+#toomuchfun:hover {
+    transform: scale(1.4) skew(-7deg, -9deg) translateY(-5em) translateX(-1ex);
+    font-family: sans-serif;
+    color: gray;
+}
+    </style>
 </head>
+
 <body>
     <center>
         <h1>web design is my passion</h1>
         <p>website property of nate</p>
+        <p>if you would like to pay me to design your website, feel free</p>
+        <p>however, i am unlikely to make it quite this beautiful</p>
+        <p>and if you are angered by how ugly my website is, i will not accept feedback</p>
+        <p>feel free to add custom stylesheets to your browser, though</p>
+        <p>the (near-) complete lack of any css on this page means your browser's default styles will take full effect</p>
+        <pre style="transform: rotate(90deg)">:)</pre>
+        <p style="transform: rotate(10deg)"> ok, maybe a little css. </p>
+        <p style="transform: rotate(-5deg)"> just a little, though. </p>
+        <p id="toomuchfun"> can't be having too much fun, after all. </p>
 </body>
 </html>
