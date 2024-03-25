@@ -27,6 +27,10 @@
             display: block;
         }
 
+        a:visited {
+            color: blue;
+        }
+
     </style>
     <script>
 
@@ -36,9 +40,12 @@
         function randomColor() {
             var arr = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'a', 'b', 'c', 'd', 'e', 'f'];
             var s = "";
-            for (var i = 0; i < 6; i++) {
                 s += arr[Math.floor(Math.random() * 16)];
-            }
+                s += arr[Math.floor(Math.random() * 16)];
+                s += arr[Math.floor(Math.random() * 16)];
+                s += arr[Math.floor(Math.random() * 16)];
+                s += arr[Math.floor(Math.random() * 16)];
+                s += arr[Math.floor(Math.random() * 16)];
             return "#" + s;
         }
 
@@ -71,9 +78,21 @@
         <button onclick="bad()">button that makes you have no fun at all</button>
         <button onclick="body().style.cssText=''">button that may or may not be worth pressing</button>
 
-        <a style="appearance:button" href="iykyk.html">
+        <a href="iykyk.html">
             do you or a loved one know me in real life?
             you may be entitled to financial compensation for this tragedy.
         </a>
+        <!--
+        <br />
+        <a href="poetry.html">
+            the horror of solitude can even exceed
+            the horror of communication
+        </a>
+        -->
+        <br />
+        <a href="end.html">
+            at times, i even engage in various endeavours! how joyous!
+        </a>
+
 </body>
 </html>
