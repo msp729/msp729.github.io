@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>the best i could possibly have done</title>
+<link rel="stylesheet" href="https://unpkg.com/blocks.css/dist/blocks.min.css" />
+<style type="text/css">
+iframe#qbframe {
+    width: 75%;
+    height: 98vh;
+}
+div.parent * {
+    display: inline-block;
+}
+div.child {
+    width: 20%;
+}
+div.child * {
+    display: block;
+}
+* {
+    vertical-align: middle;
+}
+</style>
+</head>
+<body>
+    <div class = "parent">
+        <iframe src="https://qbreader.org/singleplayer" id="qbframe" class="fixed wrapper block"></iframe>
+        <div class = "child">
+            <button class="accent block" id="grab">
+                The button that retrieves stats, for copy-and-pasting into google sheets.
+            </button>
+            <pre class="fixed block" id="result">This is where the stats will be.</pre>
+            credit to <a href="https://thesephist.github.io/blocks.css/">https://thesephist.github.io/blocks.css/</a>
+        </div>
+    </div>
+</body>
+
+<script>
+    function get() {
+        return document.querySelector("#qbframe").contentDocument.querySelector("#statline").innerText
+    }
+
+    window.onload = e => {
+        document.querySelector("#grab").addEventListener("click", () => {
+            document.querySelector("#result").innerText = get()
+        })
+    }
+</script>
+</html>
