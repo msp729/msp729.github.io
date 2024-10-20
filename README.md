@@ -1,2 +1,2 @@
 # msp729.github.io
-This is a repository for my personal website.
+hahahaha i love webdev
