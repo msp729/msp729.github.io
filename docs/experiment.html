@@ -5,9 +5,12 @@
     <meta charset="UTF-8">
     <title>Probability Experiment</title>
 </head>
+
 <body>
     <center>
-        <button onclick='document.querySelector("#iframe").src = "./frame.html?" + Math.random().toFixed(2); document.querySelector("#prob").innerText = ""'> new probability
+        <button
+            onclick='document.querySelector("#iframe").src = "./frame.html?" + Math.random().toFixed(2); document.querySelector("#prob").innerText = ""'>
+            new probability
         </button>
         <iframe id="iframe" src="./frame.html?0"> </iframe>
         <button

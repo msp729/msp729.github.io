@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <title>The Greatest Website You've Ever Seen</title>
     <meta charset="UTF-8">
     <style>
-
         #toomuchfun {
             transform: scale(1.1) skew(5deg, 5deg);
             transition: transform 5s ease-in-out, color 20s ease-in-out, font-family 1s ease-in-out, text-shadow 5s ease-in-out;
@@ -30,7 +30,6 @@
         a:visited {
             color: blue;
         }
-
     </style>
     <script>
 
@@ -40,18 +39,18 @@
         function randomColor() {
             var arr = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'a', 'b', 'c', 'd', 'e', 'f'];
             var s = "";
-                s += arr[Math.floor(Math.random() * 16)];
-                s += arr[Math.floor(Math.random() * 16)];
-                s += arr[Math.floor(Math.random() * 16)];
-                s += arr[Math.floor(Math.random() * 16)];
-                s += arr[Math.floor(Math.random() * 16)];
-                s += arr[Math.floor(Math.random() * 16)];
+            s += arr[Math.floor(Math.random() * 16)];
+            s += arr[Math.floor(Math.random() * 16)];
+            s += arr[Math.floor(Math.random() * 16)];
+            s += arr[Math.floor(Math.random() * 16)];
+            s += arr[Math.floor(Math.random() * 16)];
+            s += arr[Math.floor(Math.random() * 16)];
             return "#" + s;
         }
 
-        uhoh = () => { appendBodyCss("background: " + randomColor() + ";") }
-        good = () => { appendBodyCss("background: black;") }
-        bad = () => { appendBodyCss("background: white") }
+        uhoh = () => {appendBodyCss("background: " + randomColor() + ";")}
+        good = () => {appendBodyCss("background: black;")}
+        bad = () => {appendBodyCss("background: white")}
 
     </script>
 </head>
@@ -66,7 +65,8 @@
 
         <p>and if you are angered by how ugly my website is, i will not accept feedback</p>
         <p>feel free to add custom stylesheets to your browser, though</p>
-        <p>the (near-) complete lack of any css on this page means your browser's default styles will take full effect</p>
+        <p>the (near-) complete lack of any css on this page means your browser's default styles will take full effect
+        </p>
 
         <pre style="transform: rotate(90deg)">:)</pre>
         <p style="transform: rotate(10deg)"> ok, maybe a little css. </p>
@@ -80,4 +80,5 @@
 
         <a href="./experiment.html">link to a short experiment</a>
 </body>
+
 </html>
